@@ -12,8 +12,10 @@ const ListElement = ({
   return (
     <>
       <li
-        className={`p-2 cursor-pointer grid grid-cols-3 gap-16 rounded text-sm w-full ${
-          selectedItem ? "bg-slate-100" : "bg-white"
+        className={`p-2 cursor-pointer grid grid-cols-3 gap-16 rounded text-sm w-full hover:bg-slate-200 ${
+          selectedItem
+            ? "bg-[#5579EC] text-white hover:bg-[#5579EC]"
+            : "bg-white"
         }`}
         onClick={onClick}
       >

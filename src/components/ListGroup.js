@@ -15,8 +15,8 @@ const ListGroup = ({ title, items, onSelectItem, selectedItem }) => {
             currency={item.currency}
             organization_id={item.organization_id}
             type={item.type}
-            selectedItem={selectedItem?.id === item.id} // Ahora compara correctamente
-            onClick={() => onSelectItem(item)} // Pasa el evento correctamente
+            selectedItem={selectedItem?.id === item.id}
+            onClick={() => onSelectItem(item)}
           />
         ))}
       </ul>

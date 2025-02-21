@@ -53,7 +53,10 @@ function App() {
       <ListGroup
         title="Selecciona una factura"
         items={receipts}
-        onSelectItem={setSelectedReceipt}
+        onSelectItem={(receipt) => {
+          setSelectedReceipt(receipt);
+          setSelectedCreditNote(null); // Limpia la nota de crédito al cambiar de factura
+        }}
         selectedItem={selectedReceipt}
       />
 
@@ -74,7 +77,7 @@ function App() {
             className="bg-[#5579EC] px-4 py-2 rounded-md text-white"
             onClick={handleModalState}
           >
-            Confirmar
+            Asignar
           </button>
           {modalState && (
             <ModalConfirmation changeModalState={handleModalState} />
