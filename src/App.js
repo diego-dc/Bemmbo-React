@@ -35,6 +35,10 @@ function App() {
   // define the function to handle the modal state
   const handleModalState = () => {
     setModalState(!modalState);
+    if (modalState) {
+      setSelectedCreditNote(null);
+      setSelectedReceipt(null);
+    }
   };
 
   // Filter credit notes by selected receipt
